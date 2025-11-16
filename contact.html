@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form – Holy Lives Archive</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+        /* GENERAL STYLES (same as previous site) */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #4b0082, #8a2be2);
+            color: #f3e8ff;
+            max-width: 1500px;
+            margin: auto;
+        }
+
+        a {
+            color: #e0c3fc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 3rem 0rem;
+            background: rgba(75, 0, 130, 0.7);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin: 0;
+            color: #fff;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            color: #e0c3fc;
+        }
+
+        /* NAVIGATION */
+        nav {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        nav a {
+            margin: 0 1rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* FORM CONTAINER */
+        .form-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .form-box label {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .inputBox, .commentsBox {
+            width: 95%;
+            margin:auto;
+            margin-top:10px;
+            border-radius: 8px;
+            border: 1px solid #c8b6f7;
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            padding: 12px;
+            font-size: 1rem;
+        }
+
+        .commentsBox {
+            height: 130px;
+        }
+
+        .submitBox {
+            background-color: #fff;
+            color: #4b0082;
+            border-radius: 8px;
+            border: none;
+            height: 50px;
+            width: 130px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 15px;
+        }
+
+        .submitBox:hover {
+            background-color: #e0c3fc;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(75, 0, 130, 0.7);
+            color: #f3e8ff;
+            margin-top: 3rem;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Holy Lives Archive</h1>
+        <p>Contact Form</p>
+    </header>
+
+    <!-- NAV -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About This Blog</a>
+    </nav>
+
+    <!-- FORM -->
+    <div class="form-box">
+        <form action="submit_form.php" method="POST">
+
+            <label for="name">Name:</label><br/>
+            <input class="inputBox" type="text" id="name" name="name">
+            <br/><br/>
+
+            <label for="email">Email:</label><br/>
+            <input class="inputBox" type="email" id="email" name="email">
+            <br/><br/>
+
+            <label for="message">Comments:</label><br/>
+            <textarea class="commentsBox" id="message" name="message"></textarea>
+            <br/><br/>
+
+            <input class="submitBox" type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&#10084; Created with love for inspiration and reflection</p>
+    </footer>
+
+</body>
+</html>
