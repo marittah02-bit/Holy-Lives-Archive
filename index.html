@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amethyst Archive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        /* GENERAL STYLES */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #4b0082, #8a2be2);
+            color: #f3e8ff;
+            max-width:1500px;
+            margin:auto;
+        }
+
+        a {
+            color: #e0c3fc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 3rem 0rem;
+            background: rgba(75, 0, 130, 0.7);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            width:100%;
+            box-sizing:border-box;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin: 0;
+            color: #fff;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            color: #e0c3fc;
+        }
+
+        /* NAVIGATION */
+        nav {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        nav a {
+            margin: 0 1rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            padding: 2rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .saint-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .saint-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+
+        .saint-card h2 {
+            font-family: 'Playfair Display', serif;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .saint-card p {
+            line-height: 1.6;
+        }
+
+        /* REFLECTION SECTION */
+        .reflection {
+            background: rgba(138, 43, 226, 0.3);
+            border-left: 5px solid #e0c3fc;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+            font-style: italic;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .reflection h2 {
+            font-family: 'Playfair Display', serif;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .reflection p {
+            color: #f3e8ff;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* WRITING ARTICLE SECTION */
+        .writing-article {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 3rem 20px;
+            color: #f3e8ff;
+        }
+
+        .writing-image {
+            flex: 0 0 auto;
+            float: left;
+            margin-right: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 12px;
+        }
+
+        .writing-image img {
+            width: 200px; /* smaller image size */
+            border-radius: 12px;
+            border: 2px solid #e0c3fc;
+        }
+
+        .writing-text {
+            flex: 1 1 0;
+            column-count: 2;/*decide wether to keep or remove columns*/
+            column-gap: 2rem;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+
+        .writing-text h2 {
+            font-family: 'Playfair Display', serif;
+            color: #fff;
+            margin-bottom: 1rem;
+            column-span: all; /* heading spans both columns */
+            margin-top:0px;
+        }
+
+        .writing-text p{
+            margin-top:0px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(75, 0, 130, 0.7);
+            color: #f3e8ff;
+            margin-top: 3rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .writing-article {
+                flex-direction: column;
+            }
+            .writing-image {
+                margin-bottom: 1.5rem;
+                width: 100%;
+                float: none;
+            }
+            .writing-text {
+                column-count: 1; /* single column on small screens */
+            }
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .saint-card, .reflection {
+                padding: 1rem;
+            }
+
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Amethyst Archive</h1>
+        <p>Discover the lives and wisdom of the saints</p>
+    </header>
+
+    <nav>
+        <a href="about.html">About This Blog</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <main>
+        <!-- SAINT CARDS -->
+        <div class="saint-card">
+            <h2>Saint Francis of Assisi</h2>
+            <p>Known for his love of nature and animals, Saint Francis dedicated his life to serving the poor and spreading peace.</p>
+        </div>
+
+        <div class="saint-card">
+            <h2>Saint Teresa of Calcutta</h2>
+            <p>Also known as Mother Teresa, she devoted her life to helping the sick, poor, and dying, embodying compassion and selflessness.</p>
+        </div>
+
+        <div class="saint-card">
+            <h2>Saint Joan of Arc</h2>
+            <p>A courageous young woman who led armies and inspired a nation through her unwavering faith and determination.</p>
+        </div>
+
+        <!-- REFLECTION OF THE DAY -->
+        <section class="reflection">
+            <h2>Reflection of the Day</h2>
+            <p>"Even in the quietest moments, there is a spark of grace guiding our hearts. Today, I pause to notice it."</p>
+        </section>
+    </main>
+
+    <!-- FULL ARTICLE SECTION WITH SMALL FLOATING IMAGE -->
+    <section class="writing-article">
+        <div class="writing-image">
+            <img src="https://img.over-blog-kiwi.com/2/21/36/68/20180724/ob_0952cc_st-therese-with-roses.jpg" alt="Saint Image">
+        </div>
+        <div class="writing-text">
+            <h2>The Quiet Strength of the Saints</h2>
+            <p>
+                In the lives of the saints, we find lessons that transcend time, offering wisdom and guidance for the modern world.  
+                Their stories are filled with moments of courage, patience, and unwavering faith, each a testament to the human spirit's potential for goodness.
+            </p>
+            <p>
+                Consider Saint Teresa of Calcutta, whose compassion and tireless dedication to the poor inspired millions.  
+                Her actions remind us that small, deliberate acts of kindness can create ripples of profound change.  
+                Similarly, Saint Francis of Assisi teaches us reverence for nature and humility, encouraging a life of simplicity and gratitude.
+            </p>
+            <p>
+                Observing these lives, one realizes that sanctity is not confined to extraordinary feats alone,  
+                but can manifest in the quiet daily choices of integrity, patience, and selflessness.  
+                In reflecting on their examples, we are invited to examine our own lives and ask how we might cultivate grace and virtue.
+            </p>
+            <p>
+                The saints' wisdom also provides solace during times of uncertainty.  
+                Their unwavering faith demonstrates that challenges, trials, and suffering are not obstacles to meaning, but opportunities to grow and inspire others.  
+                Each life story, rich with struggle and triumph, contributes to a collective legacy that continues to guide humanity.
+            </p>
+            <p>
+                Ultimately, the lives of the saints encourage us to embrace our potential for compassion, courage, and integrity.  
+                In our everyday moments, we are called to act with intention, kindness, and faith, embodying the quiet strength that has defined those who came before us.  
+                As we reflect upon their examples, we find pathways toward living more meaningful and impactful lives.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&#10084; Created with love for inspiration and reflection</p>
+    </footer>
+</body>
+</html>
